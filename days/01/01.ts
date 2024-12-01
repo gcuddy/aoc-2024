@@ -49,7 +49,7 @@ const part2 = (str: string): number => {
     frequency.set(n, f + 1)
   }
 
-  const n = left.reduce((acc, l, i) => {
+  const n = left.reduce((acc, l) => {
     const f = frequency.get(l) ?? 0;
     const score = l * f;
     return acc + score;
@@ -58,6 +58,11 @@ const part2 = (str: string): number => {
   return n
 
 }
+
+const text = await (Bun.file('./input.txt')).text()
+
+console.log('part 1', part1(text))
+console.log('part 2', part2(text))
 
 
 export { part1, part2 } 

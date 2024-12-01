@@ -13,16 +13,11 @@ describe("01 part 1", () => {
     expect(part1(test_input)).toBe(11)
   })
 
-  test('actual input', async () => {
-    const text = await (Bun.file('./input.txt')).text()
-    expect(part1(test_input)).toBe(11)
-  })
 })
 
 describe("01 part 2", () => {
   test('test input', () => {
     expect(part2(test_input)).toBe(31)
   })
-
 })
 
