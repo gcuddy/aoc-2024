@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { main } from "./01";
+import { part1, part2 } from "./01";
 
 const test_input = `3   4
 4   3
@@ -8,13 +8,21 @@ const test_input = `3   4
 3   9
 3   3`
 
-describe("01 test input", () => {
+describe("01 part 1", () => {
   test('test input', () => {
-    expect(main(test_input)).toBe(11)
+    expect(part1(test_input)).toBe(11)
   })
 
-  test('smallest number', () => {
-    expect(main(test_input)).toBe(11)
+  test('actual input', async () => {
+    const text = await (Bun.file('./input.txt')).text()
+    expect(part1(test_input)).toBe(11)
   })
+})
+
+describe("01 part 2", () => {
+  test('test input', () => {
+    expect(part2(test_input)).toBe(31)
+  })
+
 })
 
