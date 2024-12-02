@@ -8,7 +8,7 @@ const test_input = `7 6 4 2 1
 8 6 4 4 1
 1 3 6 7 9`
 
-describe("01 part 1", () => {
+describe("02 part 1", () => {
 
   test('levels', () => {
     expect(isSafe([7, 6, 4, 2, 1])).toBe(true)
@@ -23,7 +23,7 @@ describe("01 part 1", () => {
 
 })
 
-describe("01 part 2", () => {
+describe("02 part 2", () => {
   test('test input', () => {
     expect(part2(test_input)).toBe(4)
   })
