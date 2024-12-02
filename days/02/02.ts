@@ -50,8 +50,27 @@ export const part1 = (str: string): number => {
 
 export const part2 = (str: string): number => {
 
-  return 0
+
+  const reports = str.split('\n').filter(Boolean);
+
+  return reports.reduce((acc, report, index) => {
+    const levels = report.split(" ").map(s => +s)
+    // try every level combination haha brute force
+    const levelsLevels: number[][] = [];
+    levelsLevels.push(levels);
+    for (let i = 0; i < levels.length; i++) {
+      // splice out item
+      const levels_ = [...levels]
+      levels_.splice(i, 1)
+      levelsLevels.push(levels_)
+    }
+    const safe = levelsLevels.some(level => isSafe(level))
+    if (safe) return acc + 1;
+    return acc;
+  }, 0)
+
 }
 
 const text = await (Bun.file('./input.txt')).text()
 console.log('part 1', part1(text))
+console.log('part 2', part2(text))
