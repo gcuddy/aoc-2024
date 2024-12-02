@@ -23,7 +23,7 @@ describe("01 part 1", () => {
 
 })
 
-describe("01 part 1", () => {
+describe("01 part 2", () => {
   test('test input', () => {
     expect(part2(test_input)).toBe(4)
   })
