@@ -11,6 +11,10 @@ describe("02 part 1", () => {
 
 describe("02 part 2", () => {
   test("test input", () => {
-    expect(part2(test_input)).toBe(4);
+    expect(
+      part2(
+        `xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))`,
+      ),
+    ).toBe(48);
   });
 });
